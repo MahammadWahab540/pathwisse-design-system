@@ -1,0 +1,8 @@
+<!-- @dsCard group="Brand" height=120 subtitle="derived from the written spec" -->
+<div id="root" style="padding:16px;background:var(--bg-canvas)"></div>
+<script>
+const P = window.Pathwisse, h = React.createElement;
+const Stack = (p) => h("div", {style: Object.assign({display:"flex",gap:12,flexWrap:"wrap",alignItems:"center"}, p.style)}, p.children);
+function App(){return h(Stack,{style:{gap:24}},h(P.LadderMark,{size:16}),h(P.LadderMark,{size:24}),h(P.LadderMark,{size:48}),h("span",{style:{font:"600 16px/24px var(--font-sans)",letterSpacing:"-0.01em"}},"Pathwisse"));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

@@ -1,0 +1,248 @@
+/* Pathwisse ProofOS — generated from tokens.json */
+:root, [data-theme="light"] {
+  --bg-canvas: #fafaf8; /* Page ground. Warm off-white in light, warm charcoal in dark. */
+  --bg-surface: #ffffff; /* Cards, panes, inputs and popovers sitting on bg-canvas. */
+  --bg-subtle: #f4f4f0; /* Row hover, quiet fills, secondary button hover. */
+  --bg-inset: #eeeee8; /* Disabled controls, code blocks, inset wells, ghost hover. */
+  --bg-selected: #edf2fe; /* Current row or selected item. Pair with a 2px brand edge. */
+  --notch-cut: var(--bg-canvas); /* Paints the folded corner of a notched surface. Set to the actual background when a notched surface is not on bg-canvas. */
+  --border-hairline: #e6e6df; /* Section rules inside a surface, table row separators. */
+  --border-default: #d9d9d0; /* Default 1px structural border on cards and panes. */
+  --border-strong: #a4aab2; /* Hover border on cards and cells; dashed locked outlines. */
+  --border-control: #8c8c82; /* Borders of inputs, buttons and other controls. At least 3:1 on bg-surface in both themes. */
+  --text-primary: #20252b; /* Body and headings on bg-canvas, bg-surface, bg-subtle. 7:1 or better in both themes. */
+  --text-secondary: #444c56; /* Supporting copy on bg-surface, bg-canvas, bg-inset and bg-selected. */
+  --text-tertiary: #636b75; /* Metadata, captions, mono labels on bg-surface, bg-canvas, bg-subtle and bg-selected. */
+  --text-disabled: #a4aab2; /* Disabled ink only; exempt from contrast. */
+  --text-inverse: #ffffff; /* Glyph or text on a solid stage fill (verified cells, stamps). */
+  --text-link: #2458e8; /* Inline links on bg-surface and bg-canvas. */
+  --brand: #102f60; /* Pathwisse navy: selection edge, companion rule, Review stage mark. Lightens to periwinkle in dark. */
+  --brand-subtle: #e9eef7; /* Quiet brand wash behind Review content. */
+  --action-primary-bg: #102f60; /* Primary button fill. Inverts to pale navy in dark. */
+  --action-primary-bg-hover: #0a2147; /* Primary button hover fill. */
+  --action-primary-fg: #ffffff; /* Primary button label on action-primary-bg and its hover. */
+  --action-primary-edge: #0a2147; /* 2px hard lower edge of the primary button; collapses on press. */
+  --action-secondary-bg: #ffffff; /* Secondary button fill with border-control. */
+  --action-secondary-bg-hover: #f4f4f0; /* Secondary button hover fill. */
+  --action-ghost-bg-hover: #eeeee8; /* Ghost button and icon-button hover fill. */
+  --focus-ring: #2458e8; /* 2px solid focus outline with 2px offset, on every surface. Never removed. */
+  --stage-learn-solid: #2458e8; /* Learn: Do I understand it? Fills, borders and the proof-cell mark (3:1 on bg-surface). Not for small text. */
+  --stage-learn-text: #2458e8; /* Learn text and glyph ink on bg-surface and stage-learn-tint (4.5:1 in both themes). */
+  --stage-learn-tint: #edf2fe; /* Learn background wash: done cells, tags, callouts. */
+  --stage-learn-line: #c4d3fa; /* Learn tinted border on tags and callouts. */
+  --stage-practice-solid: #c07824; /* Practice: Can I do it unaided? Fills, borders and the proof-cell mark (3:1 on bg-surface). Not for small text. */
+  --stage-practice-text: #8f5510; /* Practice text and glyph ink on bg-surface and stage-practice-tint (4.5:1 in both themes). */
+  --stage-practice-tint: #fbf1e3; /* Practice background wash: done cells, tags, callouts. */
+  --stage-practice-line: #efd3a8; /* Practice tinted border on tags and callouts. */
+  --stage-build-solid: #7156b5; /* Build: Can I ship it? Fills, borders and the proof-cell mark (3:1 on bg-surface). Not for small text. */
+  --stage-build-text: #7156b5; /* Build text and glyph ink on bg-surface and stage-build-tint (4.5:1 in both themes). */
+  --stage-build-tint: #f1eef9; /* Build background wash: done cells, tags, callouts. */
+  --stage-build-line: #d3c8ec; /* Build tinted border on tags and callouts. */
+  --stage-review-solid: #102f60; /* Review: Does it hold up? Fills, borders and the proof-cell mark (3:1 on bg-surface). Not for small text. */
+  --stage-review-text: #102f60; /* Review text and glyph ink on bg-surface and stage-review-tint (4.5:1 in both themes). */
+  --stage-review-tint: #e9eef7; /* Review background wash: done cells, tags, callouts. */
+  --stage-review-line: #bccae3; /* Review tinted border on tags and callouts. */
+  --stage-prove-solid: #167d66; /* Prove: Can others trust it? Fills, borders and the proof-cell mark (3:1 on bg-surface). Not for small text. */
+  --stage-prove-text: #126a55; /* Prove text and glyph ink on bg-surface and stage-prove-tint (4.5:1 in both themes). */
+  --stage-prove-tint: #e7f4f0; /* Prove background wash: done cells, tags, callouts. */
+  --stage-prove-line: #b3dccf; /* Prove tinted border on tags and callouts. */
+  --status-success-text: var(--stage-prove-text); /* Verified or passed text on status-success-tint. Reserved for attested or passing, never merely done. */
+  --status-success-tint: var(--stage-prove-tint); /* Verified or passed wash. */
+  --status-warning-text: var(--stage-practice-text); /* Pending or stale text on status-warning-tint. */
+  --status-warning-tint: var(--stage-practice-tint); /* Pending or stale wash. */
+  --status-danger-solid: #b3261e; /* Error mark and failed-check icon. Functional red, not a brand accent. */
+  --status-danger-text: #b3261e; /* Error text on bg-surface and status-danger-tint (4.5:1). */
+  --status-danger-tint: #fcecea; /* Error banner wash. */
+  --status-danger-line: #f0bdb8; /* Error banner border. */
+  --status-info-text: var(--stage-learn-text); /* Informational text on status-info-tint. */
+  --status-info-tint: var(--stage-learn-tint); /* Informational wash. */
+  --shadow-raised: 0 1px 0 rgba(16,47,96,0.05); /* Raised surface: a 1px lower edge only. */
+  --shadow-overlay: 0 12px 32px -12px rgba(16,24,40,0.22), 0 2px 6px -2px rgba(16,24,40,0.1); /* Popovers and menus only. Dark gains a 1px border so overlays still separate. */
+}
+[data-theme="dark"] {
+  --bg-canvas: #111315;
+  --bg-surface: #171a1d;
+  --bg-subtle: #1a1d20;
+  --bg-inset: #212529;
+  --bg-selected: #172041;
+  --notch-cut: var(--bg-canvas);
+  --border-hairline: #2a2f34;
+  --border-default: #343a40;
+  --border-strong: #565d66;
+  --border-control: #7b838c;
+  --text-primary: #ecede9;
+  --text-secondary: #b9bec5;
+  --text-tertiary: #8f96a0;
+  --text-disabled: #565d66;
+  --text-inverse: #171a1d;
+  --text-link: #7e9cff;
+  --brand: #a9c1f0;
+  --brand-subtle: #18233b;
+  --action-primary-bg: #e4ebfa;
+  --action-primary-bg-hover: #f2f5fd;
+  --action-primary-fg: #0b1f40;
+  --action-primary-edge: #8ea4cf;
+  --action-secondary-bg: #1a1d20;
+  --action-secondary-bg-hover: #212529;
+  --action-ghost-bg-hover: #212529;
+  --focus-ring: #7e9cff;
+  --stage-learn-solid: #7e9cff;
+  --stage-learn-text: #7e9cff;
+  --stage-learn-tint: #172041;
+  --stage-learn-line: #2c3e78;
+  --stage-practice-solid: #d9954a;
+  --stage-practice-text: #e5ab6a;
+  --stage-practice-tint: #2d2112;
+  --stage-practice-line: #6a4a1f;
+  --stage-build-solid: #b09bec;
+  --stage-build-text: #b09bec;
+  --stage-build-tint: #231d3a;
+  --stage-build-line: #46397a;
+  --stage-review-solid: #a9c1f0;
+  --stage-review-text: #a9c1f0;
+  --stage-review-tint: #18233b;
+  --stage-review-line: #34466f;
+  --stage-prove-solid: #4fc3a4;
+  --stage-prove-text: #4fc3a4;
+  --stage-prove-tint: #112a25;
+  --stage-prove-line: #1f5a4d;
+  --status-success-text: var(--stage-prove-text);
+  --status-success-tint: var(--stage-prove-tint);
+  --status-warning-text: var(--stage-practice-text);
+  --status-warning-tint: var(--stage-practice-tint);
+  --status-danger-solid: #e0645b;
+  --status-danger-text: #f08a82;
+  --status-danger-tint: #301816;
+  --status-danger-line: #6b2e2a;
+  --status-info-text: var(--stage-learn-text);
+  --status-info-tint: var(--stage-learn-tint);
+  --shadow-raised: 0 1px 0 rgba(0,0,0,0.3);
+  --shadow-overlay: 0 16px 40px -12px rgba(0,0,0,0.6), 0 0 0 1px #343a40;
+}
+:root {
+  --space-0: 0; /* No gap. */
+  --space-1: 4px; /* Half-step. Icon to label, tag padding. */
+  --space-2: 8px; /* Base unit. Control inner gaps. */
+  --space-3: 12px; /* Compact padding. */
+  --space-4: 16px; /* Inside cards. */
+  --space-5: 20px; /* Row padding. */
+  --space-6: 24px; /* Card-grid gap, layout gutter. */
+  --space-8: 32px; /* Between related blocks. */
+  --space-10: 40px; /* Between page sections. */
+  --space-12: 48px; /* Large block gap. */
+  --space-16: 64px; /* Page margins on wide screens. */
+  --space-24: 96px; /* Hero spacing. */
+  --radius-mark: 2px; /* Proof cells, pips, ticks, inline code. Marks, not containers. */
+  --radius-control: 6px; /* Buttons, inputs, chips, tags, segmented items. */
+  --radius-surface: 8px; /* Cards, panes, code blocks, banners. Nothing larger; no pills or circles. */
+  --control-sm: 28px; /* Small control height. Minimum interactive target. */
+  --control-md: 32px; /* Default control height; primary targets. */
+  --control-lg: 40px; /* Large control height. */
+  --border-width: 1px; /* All structural borders. */
+  --border-width-strong: 2px; /* Selection edge, focus ring, stamps. */
+  --press-depth: 2px; /* Travel and edge height of commit controls (primary button, choice options). Other controls press 1px. */
+  --notch-size: 12px; /* Folded-corner size on verified surfaces. */
+  --layout-max: 1280px; /* Maximum page width. */
+  --layout-gutter: 24px; /* Grid gutter; 16px below 960px. */
+  --nav-width: 216px; /* Left rail width. */
+  --topbar-height: 48px; /* Sticky top bar. */
+  --pane-navigator: 280px; /* Lesson outline pane. */
+  --pane-companion: 344px; /* AI companion pane. */
+  --reading-measure: 66ch; /* Maximum line length for lesson copy. */
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --text-t-display: 600 40px/40px var(--font-sans); /* Page statement. One per screen. */
+  --text-t-h1: 600 28px/32px var(--font-sans); /* Lesson and card titles. */
+  --text-t-h2: 600 20px/24px var(--font-sans); /* Section titles. */
+  --text-t-h3: 600 16px/24px var(--font-sans); /* Item titles. */
+  --text-t-reading: 400 16px/28px var(--font-sans); /* Lesson copy. Cap at reading-measure (66ch). */
+  --text-t-body: 400 14px/20px var(--font-sans); /* Default UI text. */
+  --text-t-small: 400 13px/20px var(--font-sans); /* Dense UI and button labels. */
+  --text-t-caption: 400 12px/16px var(--font-sans); /* Metadata sentences. */
+  --text-t-label: 500 11px/16px var(--font-mono); /* Indices, eyebrows, counts. Uppercase (apply text-transform in CSS). */
+  --text-t-code: 400 13px/20px var(--font-mono); /* Code, identifiers, credential IDs. */
+}
+.t-display {
+  font-family: var(--font-sans);
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+.t-h1 {
+  font-family: var(--font-sans);
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+.t-h2 {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+}
+.t-h3 {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.t-reading {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.t-body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.t-small {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.t-caption {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.t-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+.t-code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/Geist-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist Mono";
+  src: url("fonts/GeistMono-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}

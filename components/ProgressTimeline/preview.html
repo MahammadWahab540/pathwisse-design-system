@@ -1,0 +1,10 @@
+<!-- @dsCard group="Signature" height=360 -->
+<div id="root" style="padding:16px;background:var(--bg-canvas)"></div>
+<script>
+const P = window.Pathwisse, h = React.createElement;
+const Stack = (p) => h("div", {style: Object.assign({display:"flex",gap:12,flexWrap:"wrap",alignItems:"center"}, p.style)}, p.children);
+const now=new Date("2026-11-17T12:00:00");
+const ev=[{id:"1",stage:"practice",title:"Passed 4 of 4 checks: window functions",detail:"Practice Lab · attempt 2",at:"2026-11-17T09:30:00",ref:"l1"},{id:"2",stage:"learn",title:"Finished lesson: PARTITION BY",at:"2026-11-17T08:55:00",ref:"l2"},{id:"3",stage:"prove",title:"SQL fundamentals verified",detail:"Reviewer: A. Rao",at:"2026-11-16T16:10:00",ref:"v1"},{id:"4",stage:"build",title:"Submitted EV-014 for review",at:"2026-11-14T11:00:00"}];
+function App(){return h("div",{style:{display:"grid",gridTemplateColumns:"1fr 1fr",gap:32}},h(P.ProgressTimeline,{events:ev,now,onOpen:()=>{}}),h(P.ProgressTimeline,{events:ev,now,variant:"compact"}));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

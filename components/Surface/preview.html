@@ -1,0 +1,10 @@
+<!-- @dsCard group="Layout" height=190 subtitle="notch = verified" -->
+<div id="root" style="padding:16px;background:var(--bg-canvas)"></div>
+<script>
+const P = window.Pathwisse, h = React.createElement;
+const Stack = (p) => h("div", {style: Object.assign({display:"flex",gap:12,flexWrap:"wrap",alignItems:"center"}, p.style)}, p.children);
+function App(){return h(Stack,{style:{alignItems:"stretch"}},
+ ["default","flat","inset","raised"].map(v=>h(P.Surface,{key:v,variant:v,style:{width:160}},h("div",{className:"pw-label"},v),h("div",{style:{marginTop:8}},"Borders carry structure."))),
+ h(P.Surface,{notch:true,style:{width:160}},h("div",{className:"pw-label"},"notch"),h("div",{style:{marginTop:8}},"Verified work only.")));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

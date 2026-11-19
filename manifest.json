@@ -1,0 +1,118 @@
+{
+  "manifestVersion": 3,
+  "name": "Pathwisse ProofOS",
+  "namespace": "Pathwisse",
+  "files": [
+    "components/Button/README.md",
+    "components/CapabilityTrail/README.md",
+    "components/Field/README.md",
+    "components/Kbd/README.md",
+    "components/LadderMark/README.md",
+    "components/Meter/README.md",
+    "components/Pips/README.md",
+    "components/ProgressTimeline/README.md",
+    "components/ProjectEvidenceCard/README.md",
+    "components/ProofCell/README.md",
+    "components/Section/README.md",
+    "components/Segmented/README.md",
+    "components/SkillVerification/README.md",
+    "components/Surface/README.md",
+    "components/Tag/README.md",
+    "components/bundle.css",
+    "components/bundle.js",
+    "components/index.d.ts",
+    "fonts/Geist-Variable.woff2",
+    "fonts/GeistMono-Variable.woff2",
+    "tokens.css"
+  ],
+  "libraries": [
+    {
+      "name": "react",
+      "version": "18",
+      "global": "React"
+    },
+    {
+      "name": "react-dom",
+      "version": "18",
+      "global": "ReactDOM"
+    }
+  ],
+  "components": [
+    {
+      "name": "Button",
+      "group": "Actions",
+      "summary": "Button is the commit control: five variants on a 28, 32 or 40px height, with the primary variant pressing 2px onto a hard lower edge."
+    },
+    {
+      "name": "Tag",
+      "group": "Marks",
+      "summary": "Tag is a 20px mono label for status, references and stage names."
+    },
+    {
+      "name": "Surface",
+      "group": "Layout",
+      "summary": "Surface is the card and pane container: a 1px bordered, 8px-radius panel on bg-surface."
+    },
+    {
+      "name": "Section",
+      "group": "Layout",
+      "summary": "Section is the ruled section header: a 1px charcoal rule, a mono index and eyebrow, and a t-h2 title."
+    },
+    {
+      "name": "Field",
+      "group": "Forms",
+      "summary": "Field is a labelled text input or textarea with a hint and an announced error."
+    },
+    {
+      "name": "Segmented",
+      "group": "Forms",
+      "summary": "Segmented is a compact radiogroup (filters) or tablist (panes) with roving tabindex."
+    },
+    {
+      "name": "Meter",
+      "group": "Marks",
+      "summary": "Meter is a 4px labelled progress bar toned by stage."
+    },
+    {
+      "name": "Pips",
+      "group": "Marks",
+      "summary": "Pips are small squares showing a level out of N, with a text equivalent."
+    },
+    {
+      "name": "Kbd",
+      "group": "Marks",
+      "summary": "Kbd is a mono key cap with a 2px lower edge for keyboard hints."
+    },
+    {
+      "name": "ProofCell",
+      "group": "Marks",
+      "summary": "ProofCell is the atomic mark: a 16, 24 or 32px square whose glyph says the stage and whose fill says how much evidence exists."
+    },
+    {
+      "name": "CapabilityTrail",
+      "group": "Signature",
+      "summary": "CapabilityTrail shows every capability and where it sits on the five stages: a ledger, a compact rail or a focus view of one capability."
+    },
+    {
+      "name": "ProjectEvidenceCard",
+      "group": "Signature",
+      "summary": "ProjectEvidenceCard presents one piece of work with the reasons to believe it: stage, skills, artifacts and review outcome."
+    },
+    {
+      "name": "SkillVerification",
+      "group": "Signature",
+      "summary": "SkillVerification is a verifiable claim, not a badge: it states the method, issuer, level and criteria behind a skill."
+    },
+    {
+      "name": "ProgressTimeline",
+      "group": "Signature",
+      "summary": "ProgressTimeline lists what the learner actually did, newest first, grouped by day."
+    },
+    {
+      "name": "LadderMark",
+      "group": "Brand",
+      "summary": "LadderMark is five rising bars ending in green, standing where a logo would sit."
+    }
+  ],
+  "assetGroups": []
+}

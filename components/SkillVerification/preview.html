@@ -1,0 +1,11 @@
+<!-- @dsCard group="Signature" height=520 subtitle="a claim, not a badge" -->
+<div id="root" style="padding:16px;background:var(--bg-canvas)"></div>
+<script>
+const P = window.Pathwisse, h = React.createElement;
+const Stack = (p) => h("div", {style: Object.assign({display:"flex",gap:12,flexWrap:"wrap",alignItems:"center"}, p.style)}, p.children);
+const rec={id:"v1",skillId:"sql-window",skillLabel:"SQL window functions",level:3,levels:5,levelLabel:"Working",method:"Reviewed project + live check",issuer:"Pathwisse reviewer panel",credentialId:"PW-7F3A-2291",issuedAt:"2026-10-02T10:00:00Z",expiresAt:"2027-10-02T10:00:00Z",status:"verified",evidenceCount:2,shareUrl:"https://example.org/v/PW-7F3A-2291",criteria:[{label:"Ranks within partitions correctly",met:true},{label:"Explains frame clauses",met:true},{label:"Handles ties deliberately",met:false}]};
+const none=Object.assign({},rec,{id:"v2",skillLabel:"Query tuning",level:1,status:"expired",credentialId:null,issuedAt:null,expiresAt:null,shareUrl:null,evidenceCount:0,criteria:[{label:"Reads an execution plan",met:false}]});
+function App(){return h("div",{style:{display:"grid",gridTemplateColumns:"1fr 1fr",gap:24,alignItems:"start"}},
+ h(P.SkillVerification,{record:rec}),h("div",null,h(P.SkillVerification,{record:none}),h("div",{style:{marginTop:16}},h(P.SkillVerification,{record:rec,variant:"row"}),h(P.SkillVerification,{record:Object.assign({},rec,{status:"pending",skillLabel:"Indexing"}),variant:"row"}))));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

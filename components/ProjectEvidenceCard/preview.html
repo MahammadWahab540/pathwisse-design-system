@@ -1,0 +1,11 @@
+<!-- @dsCard group="Signature" height=420 subtitle="notch only when verified" -->
+<div id="root" style="padding:16px;background:var(--bg-canvas)"></div>
+<script>
+const P = window.Pathwisse, h = React.createElement;
+const Stack = (p) => h("div", {style: Object.assign({display:"flex",gap:12,flexWrap:"wrap",alignItems:"center"}, p.style)}, p.children);
+const ev={id:"e1",reference:"EV-014",title:"Orders dashboard with window functions",summary:"Built a retention view over 18 months of order data, using window functions to rank customers by cohort. Reviewed for correctness and readability.",stage:"review",skills:[{id:"sql-window",label:"Window functions"},{id:"sql-join",label:"Joins"}],artifacts:[{kind:"repo",label:"orders-dashboard",href:"#"},{kind:"doc",label:"Design notes"}],review:{outcome:"Approved",reviewer:"A. Rao",notes:4},verifiedAt:"2026-10-02T10:00:00Z",createdAt:"2026-09-28T10:00:00Z"};
+const draft=Object.assign({},ev,{id:"e2",reference:"EV-015",title:"Schema for a library system",stage:"build",verifiedAt:null,review:null,createdAt:"2026-11-10T10:00:00Z"});
+function App(){return h("div",{style:{display:"grid",gridTemplateColumns:"1fr 1fr",gap:24,alignItems:"start"}},
+ h(P.ProjectEvidenceCard,{evidence:ev,onOpen:()=>{}}),h("div",{style:{display:"grid",gap:16}},h(P.ProjectEvidenceCard,{evidence:draft,variant:"compact"}),h(P.ProjectEvidenceCard,{evidence:draft})));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

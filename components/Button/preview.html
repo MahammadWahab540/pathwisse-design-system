@@ -1,0 +1,10 @@
+<!-- @dsCard group="Actions" height=140 subtitle="primary presses 2px" -->
+<div id="root" style="padding:16px;background:var(--bg-canvas)"></div>
+<script>
+const P = window.Pathwisse, h = React.createElement;
+const Stack = (p) => h("div", {style: Object.assign({display:"flex",gap:12,flexWrap:"wrap",alignItems:"center"}, p.style)}, p.children);
+function App(){return h(Stack,{style:{flexDirection:"column",alignItems:"flex-start",gap:16}},
+ h(Stack,null,h(P.Button,{variant:"primary"},"Check answer"),h(P.Button,null,"Save draft"),h(P.Button,{variant:"ghost"},"Skip"),h(P.Button,{variant:"stage",stage:"build"},"Start build"),h(P.Button,{variant:"danger"},"Discard")),
+ h(Stack,null,h(P.Button,{variant:"primary",size:"sm"},"Small"),h(P.Button,{variant:"primary",size:"lg"},"Large"),h(P.Button,{variant:"primary",loading:true},"Running"),h(P.Button,{disabled:true},"Disabled")));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

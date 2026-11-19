@@ -1,0 +1,15 @@
+<!-- @dsCard group="Signature" height=470 subtitle="ledger · compact · focus" -->
+<div id="root" style="padding:16px;background:var(--bg-canvas)"></div>
+<script>
+const P = window.Pathwisse, h = React.createElement;
+const Stack = (p) => h("div", {style: Object.assign({display:"flex",gap:12,flexWrap:"wrap",alignItems:"center"}, p.style)}, p.children);
+const caps = [
+ {id:"c1",title:"SQL fundamentals",summary:"Query, filter and join relational data",stages:[{stage:"learn",state:"done"},{stage:"practice",state:"done"},{stage:"build",state:"done"},{stage:"review",state:"verified"},{stage:"prove",state:"verified"}]},
+ {id:"c2",title:"Data modelling",summary:"Design tables that hold up under change",stages:[{stage:"learn",state:"done"},{stage:"practice",state:"active",progress:0.6,detail:"Normalise a three-table schema"},{stage:"build",state:"available"},{stage:"review",state:"locked"},{stage:"prove",state:"locked"}]},
+ {id:"c3",title:"Query performance",summary:"Read plans and fix slow queries",stages:[{stage:"learn",state:"available"},{stage:"practice",state:"locked"},{stage:"build",state:"locked"},{stage:"review",state:"locked"},{stage:"prove",state:"locked"}]}];
+function App(){const [sel,setSel]=React.useState("c2");return h("div",{style:{display:"grid",gap:24}},
+ h(P.CapabilityTrail,{capabilities:caps,selectedId:sel,onSelect:c=>setSel(c.id)}),
+ h(Stack,{style:{alignItems:"flex-start",gap:48}},h("div",null,h("div",{className:"pw-label",style:{marginBottom:8}},"compact"),h(P.CapabilityTrail,{capabilities:[caps[1]],variant:"compact"})),
+ h("div",{style:{width:360}},h("div",{className:"pw-label",style:{marginBottom:8}},"focus"),h(P.CapabilityTrail,{capabilities:[caps[1]],variant:"focus"}))));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>

@@ -1,0 +1,9 @@
+<!-- @dsCard group="Marks" height=150 -->
+<div id="root" style="padding:16px;background:var(--bg-canvas)"></div>
+<script>
+const P = window.Pathwisse, h = React.createElement;
+const Stack = (p) => h("div", {style: Object.assign({display:"flex",gap:12,flexWrap:"wrap",alignItems:"center"}, p.style)}, p.children);
+function App(){return h("div",{style:{display:"grid",gap:14,maxWidth:360}},
+ [["learn",80],["practice",60],["build",35],["review",20],["prove",100]].map(x=>h("div",{key:x[0]},h("div",{className:"pw-label",style:{marginBottom:4}},x[0]),h(P.Meter,{stage:x[0],value:x[1],label:x[0]+" progress",showValue:true}))));}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>
